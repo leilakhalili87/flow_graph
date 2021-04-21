@@ -1,0 +1,34 @@
+## NLP course project!
+#   Authors: Mark Trawick, Leila Khalili
+
+
+# English Recipe Flow Graph
+
+This set of codes wil produce a flow graph for a custom English recipe. 
+
+# Folders
+    1) ./data/list: The manually  annotated recipes in the form of *.list files
+    2) ./data/flow: The manually edge labels  of the recipes in the form of *.flow files
+    3) ./data/output/train: The feature vector for all pairs of annotated words in the training recipes 
+                     are saved in this path.
+    4) ./data/output/test: The feature vector for all pairs of annotated words in the test recipes 
+                     are saved in this path.    
+
+# Input
+    1) Please odwnload the universal sentence encoder using
+       !mkdir ../sentence_wise_email/module/module_useT
+       Download the module, and uncompress it to the destination folder. 
+       !curl -L "https://tfhub.dev/google/universal-sentence-encoder-large/3?tf-hub-format=compressed" | tar -zxvC ../sentence_wise_email/module/module_useT
+
+# Running the code for flow graphs with edged labels
+    1) python main_use.py   
+    2) pyhton cal_s.py   
+
+# Running the code for flow graphs without edged labels
+    1) python main_use.py   
+    2) pyhton cal_s_wo_label.py      
+
+# For producing the data n Example one change line 26 in cal_s.py to "name_test_file = 'test'" 
+# For producing the data n Example two change line 26 in cal_s.py to "name_test_file = 'sample'" 
+
+
